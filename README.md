@@ -1,3 +1,6 @@
+
+Quick note: the google collab has decided to stop working over a widget metadata issue. The code itself still runs great so just look to the .py file instead. 
+
 # Unsloth-Finetuning-Haiku-project
 Using UnSloth to Finetune Llama-3 and Use in Ollama
 
