@@ -166,9 +166,9 @@ FastLanguageModel.for_inference(model)
 inputs = tokenizer(
 [
     alpaca_prompt.format(
-        "Give me a beautiful, long haiku about nature",
+        "Give me a haiku poem about nature",
         "",
-        "",
+        "", 
     )
 ], return_tensors = "pt").to("cuda")
 
@@ -176,5 +176,6 @@ outputs = model.generate(**inputs, max_new_tokens = 64, use_cache = True)
 tokenizer.batch_decode(outputs)
 ```
 
-
+you could also try to add to this with some prompt engineering by giving an example haiku in the third "", for example: "autumn winds whisper  golden leaves scatter the path   stillness falls again". Experiment! 
+Please note, if you want something more interesting you will need to train this model longer, which will require more GPU (and patience) Like I said before, this is a proof of concept and experimentation 
 
